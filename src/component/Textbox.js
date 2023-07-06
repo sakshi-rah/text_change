@@ -62,23 +62,23 @@ export default function Textbox(props) {
 
     return (
         <>
-            <div className=' p-3 my-3 rounded' style={myStyle}>
+            <div className= 'p-3 my-3 rounded' style={myStyle}>
 
-                <div class="container ">
+                <div className="container ">
                     <h3>{props.heading} </h3>
                     <div className='mb-3'>
-                        <textarea class="form-control" id="Textarea" rows="5" value={text} onChange={handleOnChange}></textarea>
+                        <textarea className="form-control" id="Textarea" rows="5" value={text} onChange={handleOnChange}></textarea>
                     </div>
 
-                    <button disabled={text.length === 0} className='btn btn-warning me-2' onClick={upperClick}> Uppercase</button>
-                    <button disabled={text.length === 0} className='btn btn-warning me-2' onClick={lowerClick}> Lowercase</button>
-                    <button disabled={text.length === 0} className='btn btn-warning me-2' onClick={removeClick}> Clear Text</button>
-                    <button disabled={text.length === 0} className="btn btn-warning me-2" onClick={handleCopy}> Copy Text</button>
-                    <button disabled={text.length === 0} className="btn btn-warning me-2" onClick={handleExtraSpaces}> Remove Extra Spaces</button>
+                    <button disabled={text.length === 0} className ='btn btn-warning me-2' onClick={upperClick}> Uppercase</button>
+                    <button disabled={text.length === 0} className ='btn btn-warning me-2' onClick={lowerClick}> Lowercase</button>
+                    <button disabled={text.length === 0} className ='btn btn-warning me-2' onClick={removeClick}> Clear Text</button>
+                    <button disabled={text.length === 0} className ="btn btn-warning me-2" onClick={handleCopy}> Copy Text</button>
+                    <button disabled={text.length === 0} className ="btn btn-warning me-2" onClick={handleExtraSpaces}> Remove Extra Spaces</button>
 
                 </div>
 
-                <div className='container mt-2'>
+                <div className ='container mt-2'>
                     <h2>Text Summary</h2>
                     <p>{text.split(" ").length} Words, {text.length} Characters</p>
                     <p>{0.008 * text.split(" ").length} Minutes read </p>
@@ -89,7 +89,7 @@ export default function Textbox(props) {
             </div>
 
             <div className='text-center '>
-                <button className='btn btn-success me-5' onClick={toggleStyle}>{btnText}</button>
+                <button className ='btn btn-success me-5' onClick={toggleStyle}>{btnText}</button>
             </div>
         </>
     )
