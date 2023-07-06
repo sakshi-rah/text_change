@@ -44,16 +44,16 @@ export default function Textbox(props) {
     const [btnText, setBtnText] = useState("Dark Mode")
 
     const toggleStyle = () => {
-        if (myStyle.color === 'black') {
+        if (myStyle.color === '#212529') {
             setMyStyle({
                 color: 'white',
-                backgroundColor: 'black'
+                backgroundColor: '#212529'
             })
             setBtnText('Light Mode')
         }
         else {
             setMyStyle({
-                color: 'black',
+                color: '#212529',
                 backgroundColor: 'white'
             })
             setBtnText('Dark Mode')
