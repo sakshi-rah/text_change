@@ -7,7 +7,7 @@ function Navbar(props) {
         >
             <div className ="container-fluid">
                 <a className ="navbar-brand text-light" href="/">
-                    {props.title}
+                    📝{props.title}
                 </a>
                 <button
                     className ="navbar-toggler"
