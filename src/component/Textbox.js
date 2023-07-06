@@ -70,17 +70,18 @@ export default function Textbox(props) {
                         <textarea className="form-control" id="Textarea" rows="5" value={text} onChange={handleOnChange}></textarea>
                     </div>
 
-                    <button disabled={text.length === 0} className ='btn btn-warning me-2' onClick={upperClick}> Uppercase</button>
-                    <button disabled={text.length === 0} className ='btn btn-warning me-2' onClick={lowerClick}> Lowercase</button>
-                    <button disabled={text.length === 0} className ='btn btn-warning me-2' onClick={removeClick}> Clear Text</button>
-                    <button disabled={text.length === 0} className ="btn btn-warning me-2" onClick={handleCopy}> Copy Text</button>
-                    <button disabled={text.length === 0} className ="btn btn-warning me-2" onClick={handleExtraSpaces}> Remove Extra Spaces</button>
+                    <button disabled={text.length === 0} className ='btn btn-warning my-2 mx-2' onClick={upperClick}> Uppercase</button>
+                    <button disabled={text.length === 0} className ='btn btn-warning my-2 mx-2' onClick={lowerClick}> Lowercase</button>
+                    <button disabled={text.length === 0} className ='btn btn-warning my-2 mx-2' onClick={removeClick}> Clear Text</button>
+                    <button disabled={text.length === 0} className ="btn btn-warning my-2 mx-2" onClick={handleCopy}> Copy Text</button>
+                    <button disabled={text.length === 0} className ="btn btn-warning my-2 mx-2" onClick={handleExtraSpaces}> Remove Extra Spaces</button>
 
                 </div>
 
                 <div className ='container mt-2'>
                     <h2>Text Summary</h2>
-                    <p>{text.split(" ").length} Words, {text.length} Characters</p>
+                    <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} Words,
+                     {text.length} Characters</p>
                     <p>{0.008 * text.split(" ").length} Minutes read </p>
                     <h3>Preview</h3>
                     <p>{text}</p>
